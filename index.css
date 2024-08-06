@@ -1,0 +1,148 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    padding: 50px 0px 50px 0px;
+}
+
+.slotMachine {
+    margin: 0 auto;
+    width: 75vw;
+    height: 45vh;
+    text-align: center;
+    border: none;
+}
+
+#logo {
+    width: 25vw;
+    left: 50vw;
+    text-align: center;
+}
+
+img {
+    max-width: 20vw;
+    max-height: 20vw;
+}
+
+
+h1 {
+    margin: 2vw;
+    padding: 2vw;
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 2px solid red;
+    text-align: center;
+    font-size: 150%;
+    color: red;
+    outline: none;
+}
+
+.buttonSpin button {
+    border: 2px solid black;
+    background-color: white;
+    color: black;
+    padding: 14px 28px;
+    font-size: 16px;
+    cursor: pointer;
+    border-color: #f44336;
+    color: red;
+    outline: none;
+    position: relative;
+}
+
+.buttonSpin button:hover {
+    background: #f44336;
+    color: white;
+}
+
+table {
+    width: 100%;
+    height: 100%;
+    margin: 40px 0px 40px 0px;
+    padding: 45px;
+}
+
+.debugArea {
+    position: absolute;
+    width: 100%;
+    margin-top: 200px;
+    padding: 10px;
+    border-top: 2px dashed red;
+    text-align: center;
+}
+
+#debugTable {
+    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+    border: 1px dashed black;
+    width: 50%;
+    margin: 20px auto;
+}
+
+#debugTable td {
+    padding: 15px;
+}
+
+.buttonSave {
+    text-align: center;
+}
+
+@keyframes flickerAnimation {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.blur {
+    -webkit-animation: flickerAnimation .5s infinite;
+    -moz-animation: flickerAnimation .5s infinite;
+    -o-animation: flickerAnimation .5s infinite;
+    animation: flickerAnimation .05s infinite;
+    filter: blur(4px);
+    -webkit-filter: blur(4px);
+}
+
+.top {
+    animation: top .12s cubic-bezier(.36, .07, .19, .97) infinite;
+    transform: translate3d(0, 0, 0);
+    position: relative;
+}
+
+@keyframes top {
+
+    10%,
+    90% {
+        transform: translate3d(0, 0px, 0);
+    }
+
+    20%,
+    80% {
+        transform: translate3d(0, -50px, 0);
+    }
+
+    30%,
+    50%,
+    70% {
+        transform: translate3d(0, 50px, 0);
+    }
+
+    40%,
+    60% {
+        transform: translate3d(0, 0px, 0);
+    }
+}
